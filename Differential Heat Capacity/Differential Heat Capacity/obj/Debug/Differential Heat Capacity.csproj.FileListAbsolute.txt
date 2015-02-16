@@ -1,0 +1,9 @@
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\bin\Debug\Differential Heat Capacity.exe.config
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\bin\Debug\Differential Heat Capacity.exe
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\bin\Debug\Differential Heat Capacity.pdb
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\obj\Debug\Differential Heat Capacity.csprojResolveAssemblyReference.cache
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\obj\Debug\Differential_Heat_Capacity.Form1.resources
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\obj\Debug\Differential_Heat_Capacity.Properties.Resources.resources
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\obj\Debug\Differential Heat Capacity.csproj.GenerateResource.Cache
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\obj\Debug\Differential Heat Capacity.exe
+C:\Users\Clay\Documents\GitHub\Graphics\Differential Heat Capacity\Differential Heat Capacity\obj\Debug\Differential Heat Capacity.pdb
