@@ -36,13 +36,13 @@ namespace Differential_Heat_Capacity
             double w = 0; // frequency
             int steps = 500;
             pts = new Point[steps];
-            double T = 200 * Math.Pow(10, 3);
-            for (int i = 1; i < steps; i++ )
+            double T = Convert.ToDouble(TkUD.Value) * Math.Pow(10, 3);
+            for (int i = 1; i < steps+1; i++ )
             {
                 w = i * 3.8 * (int)Math.Pow(10, 11)*T;
                 double x = h*w/(Kb*T);
                 double u = 3*Kb/(2*Math.Pow(Math.PI,2)*Math.Pow(v,3)) * Math.Pow(Kb/h,3)*Math.Pow(T,3) * (Math.Pow(x,4)*Math.Exp(x))/Math.Pow((Math.Exp(x)-1),2);// C(w)
-                u = u / (1*Math.Pow(10,13));
+                u = u / (1*Math.Pow(10,Convert.ToDouble(scalerUD.Value)));
                 pts[i-1] = new Point(i, canvasePicBox.Height - Convert.ToInt32(Math.Truncate(u)));
             }
             Bitmap bit = new Bitmap(canvasePicBox.Width,canvasePicBox.Height);
@@ -50,6 +50,23 @@ namespace Differential_Heat_Capacity
             canvasePicBox.Image = bit;
             G.DrawLines(new Pen(Brushes.Black, 1), pts);
             
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            double w = 0; // frequency
+            int steps = 500;
+            pts = new Point[steps];
+            double T = Convert.ToDouble(TkUD.Value) * Math.Pow(10, 3);
+            for (int i = 1; i < steps+1; i++)
+            {
+                w = i * 3.8 * (int)Math.Pow(10, 11) * T;
+                double x = h * w / (Kb * T);
+                double u = 3 * Kb / (2 * Math.Pow(Math.PI, 2) * Math.Pow(v, 3)) * Math.Pow(Kb / h, 3) * Math.Pow(T, 3) * (Math.Pow(x, 4) * Math.Exp(x)) / Math.Pow((Math.Exp(x) - 1), 2);// C(w)
+                u = u / (1 * Math.Pow(10, Convert.ToDouble(scalerUD.Value)));
+                pts[i - 1] = new Point(i, canvasePicBox.Height - Convert.ToInt32(Math.Truncate(u)));
+            }
+            G.DrawLines(new Pen(Brushes.Blue, 1), pts);
         }
     }
 }

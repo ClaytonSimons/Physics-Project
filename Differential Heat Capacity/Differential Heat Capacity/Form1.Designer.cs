@@ -32,13 +32,14 @@
             this.canvasePicBox = new System.Windows.Forms.PictureBox();
             this.CxRTxt = new System.Windows.Forms.RichTextBox();
             this.frequencyRTxt = new System.Windows.Forms.RichTextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.TkUD = new System.Windows.Forms.NumericUpDown();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.scalerUD = new System.Windows.Forms.NumericUpDown();
+            this.AddBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.canvasePicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TkUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scalerUD)).BeginInit();
             this.SuspendLayout();
             // 
             // GraphBtn
@@ -84,14 +85,19 @@
             this.frequencyRTxt.TabIndex = 3;
             this.frequencyRTxt.Text = "w";
             // 
-            // numericUpDown1
+            // TkUD
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(466, 40);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.TkUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TkUD.Location = new System.Drawing.Point(466, 40);
+            this.TkUD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.TkUD.Name = "TkUD";
+            this.TkUD.Size = new System.Drawing.Size(120, 20);
+            this.TkUD.TabIndex = 4;
+            this.TkUD.Value = new decimal(new int[] {
             100,
             0,
             0,
@@ -119,28 +125,40 @@
             this.richTextBox2.TabIndex = 6;
             this.richTextBox2.Text = "C(w)/scaler";
             // 
-            // numericUpDown2
+            // scalerUD
             // 
-            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown2.Location = new System.Drawing.Point(466, 94);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 7;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.scalerUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.scalerUD.Location = new System.Drawing.Point(466, 94);
+            this.scalerUD.Name = "scalerUD";
+            this.scalerUD.Size = new System.Drawing.Size(120, 20);
+            this.scalerUD.TabIndex = 7;
+            this.scalerUD.Value = new decimal(new int[] {
             12,
             0,
             0,
             0});
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.Location = new System.Drawing.Point(515, 279);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddBtn.TabIndex = 8;
+            this.AddBtn.Text = "Add Graph";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 340);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.scalerUD);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.TkUD);
             this.Controls.Add(this.frequencyRTxt);
             this.Controls.Add(this.CxRTxt);
             this.Controls.Add(this.canvasePicBox);
@@ -149,8 +167,8 @@
             this.Text = "Heat Capacity";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.canvasePicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TkUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scalerUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,10 +179,11 @@
         private System.Windows.Forms.PictureBox canvasePicBox;
         private System.Windows.Forms.RichTextBox CxRTxt;
         private System.Windows.Forms.RichTextBox frequencyRTxt;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown TkUD;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown scalerUD;
+        private System.Windows.Forms.Button AddBtn;
     }
 }
 
